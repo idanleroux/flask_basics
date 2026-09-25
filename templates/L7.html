@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Members</h1>
+
+{% if members %}
+{% for member in members %}
+    <h2>{{member["name"]}}</h2>
+    <p>Goal: {{member["goal"]}}</p>
+{% endfor %}
+{% else %}
+    <p>No members found!</p>
+{% endif %}
+</body>
+</html>
